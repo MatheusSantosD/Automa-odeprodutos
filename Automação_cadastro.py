@@ -2,16 +2,16 @@
 
 # Overview
 
-This repository provides a streamlined solution for automating product registration tasks using Python and the pyautogui library. Whether you need to import large datasets or perform repetitive data entry in web-based systems, this project showcases how automation can significantly enhance productivity.
+#This repository provides a streamlined solution for automating product registration tasks using Python and the pyautogui library. Whether you need to import large datasets or perform repetitive data entry in web-based systems, this project showcases how automation can significantly enhance productivity.
 
-By leveraging a combination of structured data from CSV files and automation scripts, this code performs key tasks like logging into a system, navigating through forms, and registering products with precision.
+#By leveraging a combination of structured data from CSV files and automation scripts, this code performs key tasks like logging into a system, navigating through forms, and registering products with precision.
 
 import pyautogui
 import time
 import pandas as pd
 
 
-tabela = pd.read_csv("produtos.csv")
+tabela = pd.read_csv("produto.csv")
 print(tabela)
 
 
@@ -40,12 +40,12 @@ pyautogui.press('enter')
 
 
 # pedir pro computador esperar 3 segundos
-time.sleep(3)
+time.sleep(10)
 
 
 # Passo 2: Fazer login
 
-pyautogui.click(x=683, y=461)
+pyautogui.click(x=614, y=490)
 
 pyautogui.write("pythonimpressionador@gmail.com")
 
@@ -53,7 +53,10 @@ pyautogui.press('tab')
 
 pyautogui.write("hashtag")
 
-pyautogui.click(x=951, y=647)
+pyautogui.press('tab')
+
+pyautogui.press('enter')
+#pyautogui.click(x=674, y=490)
 
 
 
@@ -61,7 +64,7 @@ pyautogui.click(x=951, y=647)
 
 for linha in  tabela.index:
 
-    pyautogui.click(x=656, y=306)
+    pyautogui.click(x=955, y=340)
     
     pyautogui.write(str(tabela.loc[linha, "codigo"]))
     
@@ -92,9 +95,9 @@ for linha in  tabela.index:
         pyautogui.write(str(tabela.loc[linha, "obs"]))
 
 
-    pyautogui.click(x=854, y=622)
+    pyautogui.click(x=899, y=659)
     
-    pyautogui.scroll(5000)  
+    pyautogui.scroll(8000)  
     
 
 
@@ -103,11 +106,12 @@ for linha in  tabela.index:
 
 for linha in tabela.index:
 
-    pyautogui.click(x=668, y=305)
+    pyautogui.click(x=955, y=340)
     
     pyautogui.write(str(tabela.loc[linha, "codigo"]))
     
     pyautogui.press('tab')
+    
     
 
 
@@ -118,7 +122,6 @@ if not pd.isna(tabela.loc[linha, "obs"]):
 
     pyautogui.write(str(tabela.loc[linha, "obs"]))
     
-    pyautogui.click(x=668, y=305)
+    pyautogui.click(x=899, y=659)
     
-    pyautogui.scroll(5000)
-    
+    pyautogui.scroll(8000)
