@@ -45,10 +45,47 @@ If you want to **stop wasting time on manual data entry and learn practical auto
 
 ## 🛠️ How to Use
 
-1️⃣ **Clone this repository:**
-
 ```bash
+1️⃣ Clone this repository:
+
 git clone https://github.com/yourusername/your-repository-name.git
 
+2️⃣ Install dependencies:
+
+bash
+Copiar
+Editar
 pip install pandas pyautogui
+
+3️⃣ Edit produto.csv with your product data.
+
+4️⃣ Adjust the click coordinates (pyautogui.click(x, y)) according to your screen and browser if needed.
+
+5️⃣ Run the script:
+
+bash
+Copiar
+Editar
 python automacao_cadastro.py
+The script will open your browser, log in, and start registering products automatically for you.
+
+⚠️ Important Notes
+Use this in a test environment first before running in production.
+
+Avoid using your mouse and keyboard during execution, as pyautogui will be controlling your system.
+
+Adjust pyautogui.PAUSE and time.sleep() according to your internet speed and machine performance.
+
+🤝 Contributions
+Contributions are super welcome to improve the code, optimize flows, or add new features.
+Feel free to open an Issue or Pull Request if you would like to contribute!
+
+📜 License
+This project is licensed under the MIT License.
+
+✉️ Contact
+Questions or suggestions? Open an issue or reach out on LinkedIn so we can connect!
+
+🚀 Happy learning and productive automations!
+👊 #LetsGo
+
